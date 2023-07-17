@@ -5,6 +5,14 @@ import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
 import { Roboto } from 'next/font/google';
 import type { AppProps } from 'next/app';
 import { grey } from '@mui/material/colors';
+var getConfig = require("next/config");
+const { serverRuntimeConfig } = getConfig();
+
+let style = {};
+(async () => {
+  if (typeof serverRuntimeConfig.styles === "function")
+    style = await serverRuntimeConfig.styles();
+})();
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
