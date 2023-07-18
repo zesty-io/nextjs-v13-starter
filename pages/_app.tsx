@@ -8,12 +8,6 @@ import { grey } from '@mui/material/colors';
 var getConfig = require("next/config");
 const { serverRuntimeConfig } = getConfig();
 
-let style = {};
-(async () => {
-  if (typeof serverRuntimeConfig.styles === "function")
-    style = await serverRuntimeConfig.styles();
-})();
-
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
   style: ['normal'],
