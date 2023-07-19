@@ -11,8 +11,8 @@ async function getStyles() {
 module.exports = async () => {
   return {
     // passing sync styles
-    serverRuntimeConfig: {
-      style: await getStyles(),
+    publicRuntimeConfig: {
+      styles: await getStyles(),
     },
     trailingSlash: true,
     reactStrictMode: true,

@@ -6,7 +6,8 @@ import { Roboto } from 'next/font/google';
 import type { AppProps } from 'next/app';
 import { grey } from '@mui/material/colors';
 var getConfig = require("next/config");
-const { serverRuntimeConfig } = getConfig();
+const { publicRuntimeConfig } = getConfig();
+let styles = publicRuntimeConfig.styles;
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
