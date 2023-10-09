@@ -1,14 +1,12 @@
-
 ###start
 # These are added during the post install and then the gitignore rules removed
-.zesty
-next.config.js
-./next.config.js
+zesty.config.json
 views/zesty
 */views/zesty
 ###end
 
-package-lock.json
+# zesty.io cache
+.zesty
 
 # Logs
 logs
