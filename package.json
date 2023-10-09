@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-marketing",
+  "name": "nextjs-v13-starter",
   "author": "Zesty.io Platform Inc.",
   "version": "1.0.0",
   "private": true,
@@ -7,13 +7,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "sync": "npx @zesty-io/nextjs-sync",
     "precommit": "pretty-quick --staged",
-    "postinstall": "zesty init && npm run sync",
+    "postinstall": "npm run init",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "visualTest": "npx lost-pixel",
-    "updateBaselines": "npx lost-pixel update"
+    "updateBaselines": "npx lost-pixel update",
+    "sync": "npx nextjs-sync",
+    "init": "zesty init && npx nextjs-sync-create-settings && npx nextjs-sync-create-config && npx nextjs-sync"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
